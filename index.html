@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/44c04d1eb4.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+     (function(){
+      emailjs.init("0tfVt_wWRLuj08cc8");
+     })();
+    </script>
 </head>
 <body>
     <div class="arrow-up">
        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a> 
     </div>
     
-    
+    <!-- header -->
     <header class="header">
         <div class="navbar">
-            <a class="logo" href="/">Zar()=>{}</a>
+            <a class="logo" href="/">Zar=>{}</a>
             <nav>
-                <li><a href="#home" class="dm scroll-link">home</a></li>
-                <li><a href="#about" class="dm scroll-link">about</a></li>
-                <li><a href="#services" class="dm scroll-link">services</a></li>
-                <li><a href="#skills" class="dm scroll-link">skills</a></li>
-                <li><a href="#project" class="dm scroll-link">projects</a></li>
-                <li><a href="#reach-out" class="dm scroll-link">contact</a></li>
+                <li><a href="#home" class="dm scroll-link">Home</a></li>
+                <li><a href="#about" class="dm scroll-link">About</a></li>
+                <li><a href="#services" class="dm scroll-link">Services</a></li>
+                <li><a href="#skills" class="dm scroll-link">Skills</a></li>
+                <li><a href="#project" class="dm scroll-link">Projects</a></li>
+                <li><a href="#reach-out" class="dm scroll-link">Contact</a></li>
             </nav>
 
             <a href="#" class="hamburger-menu hide-for-desktop">
@@ -32,17 +40,19 @@
             </a>
         </div> 
     </header>
+
+    <!-- mobile nav over;ay -->
     <div class="overlay">
         <nav class="mobile-nav">
-            <li><a href="#home" class="scroll-link dm">home</a></li>
-             <li><a href="#about" class="scroll-link dm">about</a></li>
-             <li><a href="#services" class="scroll-link dm">services</a></li>
-             <li><a href="#skills" class="scroll-link dm">skills</a></li>
-            <li><a href="#reach-out" class="scroll-link dm">contact</a></li>
+            <li><a href="#home" class="scroll-link dm">Home</a></li>
+             <li><a href="#about" class="scroll-link dm">About</a></li>
+             <li><a href="#services" class="scroll-link dm">Services</a></li>
+             <li><a href="#skills" class="scroll-link dm">Skills</a></li>
+            <li><a href="#reach-out" class="scroll-link dm">Contact</a></li>
         </nav>
     </div>
-    
-   
+
+    <!-- home -->
     <div class="home" id="home">
         <div class="lay"></div>
         <video class="video-container" muted autoplay loop>
@@ -63,20 +73,21 @@
         <a href="#about"><div class="arrow-scroll"></div></a>
     </div>
 
+    <!-- about -->
     <main class="about" id="about">
         <div class="z-i">About</div>
         <h1 class='title'>About</h1> 
         <div class="profile">
             <div class="info">
-                <h1>HI, I'm Prosper Lazarus</h1>
+                <h1 class="">HI, I'm Prosper Lazarus</h1>
                 <h3>A Software Engineer</h3>
-                <p>I deign and Develop software for cutomers and companies. I specialize in creating stylish, modern websites, and online stores. My passion is to design digital user experience through captivating interface and meaningful interaction.</p>
+                <p class="scale">I design and Develop software for cutomers and companies. I specialize in creating stylish, modern websites, and online stores. My passion is to design digital user experience through captivating interface and meaningful interaction.</p>
     
-                <a href="files/PROSPER LAZARUS-CV.pdf" class="cv" download="prosper-cv">Download Cv</a>
+                <a href="files/PROSPER LAZARUS-CV.pdf" class="cv slide-in" download="prosper-cv">Download Cv</a>
             </div>
     
     
-            <div class="img-container">
+            <div class="img-container scale">
                 <img src="./images/portfolio image1.jpg" alt="img">
             </div>
         </div>
@@ -163,29 +174,37 @@
 
         
         <div class="form-container slide-in">
-            <form action="">
+            <form action="" method="Get" id="form">
                <div class="input-box">
-                  <input type="text" required>
-                  <span>Full name</span>
+                  <input id="name" type="text" required>
+                  <span for="name">Full name</span>
                 </div>
                  <div class="input-box">
-                    <input type="email" required>
-                    <span>Email</span>
+                    <input id="email" type="email" required>
+                    <span for="emial">Email</span>
                 </div>
                 <div class="input-box">
-                    <input type="text" required>
-                    <span>subject</span>
+                    <input id="message" type="text" required>
+                    <span for="message">subject</span>
                 </div>
                 <div class="input-box">
-                    <textarea name="text" id="text-area"></textarea>
-                    <span>Comment</span>
+                    <textarea name="text" id="text-area" placeholder="Comment"></textarea>
+                    <!-- <span>Comment</span> -->
                 </div>
+                <button class='submit'>Submit</button>
             </form>
-            <div class='submit'>Submit</div>
+            
         </div>
- 
     </section>
-    <footer>Prosper Lazarus | All rights reserved</footer>
+    <footer>
+        <p>Prosper Lazarus | All rights reserved</p>
+        <div class="socials">
+          <a class="sl" href="https://twitter.com/Prosper_Zarus"><i class="fa-brands fa-twitter"></i></a> 
+          <a class="sl" href="https://github.com/ZarrTech"><i class="fa-brands fa-github"></i></a> 
+          <a class="sl" href="https://www.instagram.com/prosper_laz/"><i class="fa-brands fa-instagram"></i></a> 
+           <a class="sl" href="https://www.linkedin.com/in/prosper-zarus"><i class="fa-brands fa-linkedin"></i></a> 
+        </div>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
